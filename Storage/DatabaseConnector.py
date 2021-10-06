@@ -1,7 +1,8 @@
 from pymongo import MongoClient
 import config
-import logging
-logging.basicConfig(level=logging.INFO)
+from logger import logging
+
+
 
 #client=MongoClinet(config.data_base_ip,config.data_base_port)
 

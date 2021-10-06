@@ -30,11 +30,15 @@ class Sentiment:
     def predictSetiment(self,data_to_bePredicted):
         model_outPut=model(data_to_bePredicted)
         tf_output=tf.nn.softmax(model_outPut[0],axis=-1)
-        
+        return tf_output
 
 
+    def createInputData(self,data):
+        return InputExample(guid=None,text_a=data['Reviews'],text_b=None,label=data['Sentiments'])
 
 
+    def createFeature(self,data):
+        return None
 
 
 
